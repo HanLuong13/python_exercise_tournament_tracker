@@ -1,0 +1,70 @@
+create list for slots of participants
+
+start up function
+	display text for welcome to tournament
+	prompt user for number of participants 
+		if valid number, set as number of participants
+		if not, display error and try again message
+			prompt for input again
+	return number of participants
+
+main menu function
+	display a menu and asks for user input on what they want to do 
+	validate their input as from 1-5
+	go to appropriate function based on their input
+	display: 
+	Participant Menu
+	================
+	1. Sign Up
+	2. Cancel Sign Up
+	3. View Participants
+	4. Save Changes
+	5. Exit
+
+sign up function
+	display sign up text
+	asks for participant's name
+	asks for their desired starting slot ??? from 1-50?
+	check if slot is filled
+		if slot if filled, display error and try again message
+			prompt for input again
+		if not, assign their name as single string to that slot
+	??? if slot is currently unassigned, then assign nonetype
+	display verification that they are signed up for that slot
+
+cancel sign up function
+	display cancellation text
+	asks for starting slot number from 1-50
+	asks for participant name
+	check if that name is in that slot
+		if not, display error and try again message
+			prompt for input again
+		if so, remove their name from that slot
+
+view participants function
+	display view participants text
+	get slot number
+	lower number = slot number - 5 up until 0
+	higher number = slot number + 5 up until 50
+	for loop from lower to higher number
+		show number and participant
+
+save changes function
+	display save changes text
+	prompt for input if user want to save changes to csv [y/n]
+		if y, then save to csv
+		if n, discard changes
+		if anything other, display error
+			prompt for input again
+
+exit function
+	display message to save changes from save menu, otherwise, will be lost
+	prompt if user still want to exit? 
+		if y, exit
+		if n, return to main menu
+		if anything other, display error
+			prompt for input again
+
+
+call start up function
+call main menu function
